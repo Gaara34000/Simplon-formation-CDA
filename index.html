@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Météo Transports - Simplon CDA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Arrière-plan décoratif ambiance code Java -->
+  <div class="java-bg" aria-hidden="true">
+    <pre class="code-top-left">public class WeatherService {
+    double temperature;
+    import java.time.*;
+}</pre>
+    <div class="java-watermark">☕</div>
+    <pre class="code-bottom-right">import java.time.*;
+double temperature;
+System.out.println(weather);</pre>
+  </div>
+
+  <!-- Carte météo centrale -->
+  <main class="weather-card" aria-live="polite">
+    <header class="card-header">
+      <h1>Météo en direct</h1>
+      <span id="last-update" class="badge">MàJ --:--</span>
+    </header>
+
+    <section class="main-info">
+      <div id="weather-icon" class="icon" aria-hidden="true">☀️</div>
+      <div id="temperature" class="temp">--°C</div>
+      <p id="description" class="desc">Chargement de la météo...</p>
+      <p id="city-name" class="location">📍 --</p>
+    </section>
+
+    <div class="details">
+      <div class="detail-box">
+        <span class="detail-icon" aria-hidden="true">🌡️</span>
+        <div>
+          <span class="detail-value" id="feels-like">--°C</span>
+          <span class="detail-label">Ressenti</span>
+        </div>
+      </div>
+      <div class="detail-box">
+        <span class="detail-icon" aria-hidden="true">💧</span>
+        <div>
+          <span class="detail-value" id="humidity">--%</span>
+          <span class="detail-label">Humidité</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bandeau pied de page personnalisé -->
+  <footer class="simplon-banner">
+    <span>À l'attention de Simplon</span>
+    <strong>FORMATION CDA</strong>
+    <span>SAAD JARMOUNI</span>
+  </footer>
+
+  <script src="meteo.js"></script>
+</body>
+</html>

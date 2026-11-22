@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at 20% 20%, #152b47 0%, #0b1626 65%, #070e18 100%);
+  color: #162032;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem 4.5rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Décor arrière-plan Java --- */
+.java-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.java-bg pre {
+  font-family: 'Fira Code', 'Consolas', monospace;
+  color: rgba(125, 196, 255, 0.25);
+  font-size: 1rem;
+  line-height: 1.6;
+  position: absolute;
+}
+
+.code-top-left {
+  top: 2rem;
+  left: 2rem;
+}
+
+.code-bottom-right {
+  bottom: 4.5rem;
+  right: 2rem;
+  text-align: left;
+}
+
+.java-watermark {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 6rem;
+  opacity: 0.12;
+  filter: grayscale(100%) brightness(180%);
+}
+
+/* --- Carte météo centrale --- */
+.weather-card {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 18px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  background: linear-gradient(90deg, #3264d8 0%, #4da1f7 100%);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.15rem 1.4rem;
+}
+
+.card-header h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.badge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: #ffffff;
+  color: #162032;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+}
+
+.main-info {
+  text-align: center;
+  padding: 2rem 1.5rem 1.8rem;
+}
+
+.icon {
+  font-size: 4.5rem;
+  margin-bottom: 0.4rem;
+  line-height: 1;
+}
+
+.temp {
+  font-size: 4.2rem;
+  font-weight: 800;
+  color: #111b2e;
+  line-height: 1.1;
+}
+
+.desc {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #24324a;
+  margin-top: 0.5rem;
+}
+
+.location {
+  font-size: 1rem;
+  color: #4a5973;
+  margin-top: 0.75rem;
+}
+
+/* --- Pied de carte (Ressenti & Humidité) --- */
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #e3e8f0;
+  background-color: #fafcff;
+}
+
+.detail-box {
+  padding: 1.15rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.detail-box:first-child {
+  border-right: 1px solid #e3e8f0;
+}
+
+.detail-icon {
+  font-size: 1.5rem;
+}
+
+.detail-box div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.detail-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111b2e;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  color: #556580;
+}
+
+/* --- Bandeau footer Simplon --- */
+.simplon-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: linear-gradient(90deg, #1d56c9 0%, #2f7ae5 50%, #1d56c9 100%);
+  color: #ffffff;
+  border-top: 1px solid rgba(135, 200, 255, 0.4);
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.simplon-banner strong {
+  font-size: 1.15rem;
+  letter-spacing: 0.8px;
+}
+
+@media (max-width: 520px) {
+  .simplon-banner {
+    justify-content: center;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+}
